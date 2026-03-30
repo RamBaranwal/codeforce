@@ -1,0 +1,35 @@
+<h3><a href="https://codeforces.com/problemset/problem/236/A" target="_blank" rel="noopener noreferrer">Boy or Girl</a></h3>
+
+<div class="header"><div class="title">A. Boy or Girl</div><div class="time-limit"><div class="property-title">time limit per test</div>1 second</div><div class="memory-limit"><div class="property-title">memory limit per test</div>256 megabytes</div><div class="input-file input-standard"><div class="property-title">input</div>standard input</div><div class="output-file output-standard"><div class="property-title">output</div>standard output</div></div>
+
+<div>
+<p>Those days, many boys use beautiful girls' photos as avatars in forums. So it is pretty hard to tell the gender of a user at the first glance. Last year, our hero went to a forum and had a nice chat with a beauty (he thought so). After that they talked very often and eventually they became a couple in the network.</p>
+
+<p>But yesterday, he came to see "her" in the real world and found out "she" is actually a very strong man! Our hero is very sad and he is too tired to love again now. So he came up with a way to recognize users' genders by their user names.</p>
+
+<p>This is his method: if the number of distinct characters in one's user name is odd, then he is a male, otherwise she is a female. You are given the string that denotes the user name, please help our hero to determine the gender of this user by his method.</p>
+</div>
+
+<div class="input-specification"><div class="section-title">Input</div>
+<p>The first line contains a non-empty string that contains only lowercase English letters — the user name. This string contains at most 100 letters.</p>
+</div>
+
+<div class="output-specification"><div class="section-title">Output</div>
+<p>If it is a female by our hero's method, print "CHAT WITH HER!" (without the quotes), otherwise, print "IGNORE HIM!" (without the quotes).</p>
+</div>
+
+<div class="sample-tests"><div class="section-title">Examples</div>
+<div class="sample-test"><div class="input"><div class="title">Input</div><pre>wjmzbmr</pre></div><div class="output"><div class="title">Output</div><pre>CHAT WITH HER!</pre></div></div>
+
+<div class="sample-test"><div class="input"><div class="title">Input</div><pre>xiaodao</pre></div><div class="output"><div class="title">Output</div><pre>IGNORE HIM!</pre></div></div>
+
+<div class="sample-test"><div class="input"><div class="title">Input</div><pre>sevenkplus</pre></div><div class="output"><div class="title">Output</div><pre>CHAT WITH HER!</pre></div></div>
+</div>
+
+<div class="note"><div class="section-title">Note</div>
+<p>For the first example there are 6 distinct characters in "wjmzbmr": "w", "j", "m", "z", "b", "r". So wjmzbmr is a female and you should print "CHAT WITH HER!".</p>
+</div>
+
+<div class="solution-idea"><div class="section-title">Solution idea</div>
+<p>Count distinct letters in the string and check parity. Reference implementation: <a href="../A_Boy_or_Girl.java">A_Boy_or_Girl.java</a></p>
+</div>
