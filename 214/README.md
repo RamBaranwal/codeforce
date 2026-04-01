@@ -6,7 +6,11 @@
 <div>
 <p>Furik loves math lessons very much, so he doesn't attend them, unlike Rubik. But now Furik wants to get a good mark for math. For that Ms. Ivanova, his math teacher, gave him a new task. Furik solved the task immediately. Can you?</p>
 
-<p>You are given a system of equations. You should count how many pairs of integers (a, b) (0 ≤ a, b) satisfy the system.</p>
+<p>You are given a system of equations:</p>
+<div class="equations"><pre>a^2 + b = n
+a + b^2 = m</pre></div>
+
+<p>You should count how many pairs of integers (a, b) (0 ≤ a, b) satisfy the system.</p>
 </div>
 
 <div class="input-specification"><div class="section-title">Input</div>
