@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class A_insommia_cure_wrong_but_helpful {
+    // this will be over flow when it becomes large value so avoid to do this
     private int GCD(int a, int b) {
         if (b == 0) {
             return a;
