@@ -37,5 +37,6 @@ public class A_Epic_Game {
         else{
             System.out.println("0");
         }
+        sc.close();
     }
 }
