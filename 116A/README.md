@@ -13,7 +13,13 @@
 
 <p>Then n lines follow, each contains two integers a<sub>i</sub> and b<sub>i</sub> (0&nbsp;≤&nbsp;a<sub>i</sub>,&nbsp;b<sub>i</sub>&nbsp;≤&nbsp;1000) — the number of passengers that exits the tram at the i-th stop, and the number of passengers that enter the tram at the i-th stop. The stops are given from the first to the last stop in the order of tram's movement.</p>
 
-<p>The number of people who exit at a given stop does not exceed the total number of people in the tram immediately before it arrives at the stop. This particularly means that a<sub>1</sub>=0. At the last stop, all the passengers exit the tram and it becomes empty. More formally, a<sub>n</sub> equals the number of passengers just before the last stop, and b<sub>n</sub>=0.</p>
+</p>
+
+<ul>
+    <li>The number of people who exit at a given stop does not exceed the total number of people in the tram immediately before it arrives at the stop. More formally, &forall;i (1 &le; i &le; n) : &sum;<sub>j=1</sub><sup>i-1</sup> b<sub>j</sub> &minus; &sum;<sub>j=1</sub><sup>i-1</sup> a<sub>j</sub> &ge; a<sub>i</sub>. This particularly means that a<sub>1</sub> = 0.</li>
+    <li>At the last stop, <strong>all</strong> the passengers exit the tram and it becomes empty. More formally, &sum;<sub>j=1</sub><sup>n-1</sup> b<sub>j</sub> &minus; &sum;<sub>j=1</sub><sup>n-1</sup> a<sub>j</sub> = a<sub>n</sub>.</li>
+    <li>No passenger will enter the train at the last stop. That is, b<sub>n</sub> = 0.</li>
+</ul>
 </div>
 
 <div class="output-specification"><div class="section-title">Output</div>
