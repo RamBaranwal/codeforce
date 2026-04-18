@@ -1,0 +1,68 @@
+👉 This is a two-layer check problem
+
+✅ Layer 1: Count “special digits”
+Traverse the number
+Count how many digits are 4 or 7
+
+👉 Example:
+
+n = 4477003474
+→ count = 7
+✅ Layer 2: Validate the count itself
+Now take that count
+Check:
+
+“Is this number made of only digits 4 and 7?”
+
+👉 Example:
+
+count = 7 → YES
+count = 2 → NO
+count = 44 → YES
+🧠 One-line memory trick
+
+👉
+
+Count lucky digits → check if count is lucky
+
+❗ What NOT to do (very important)
+❌ Don’t check original number again
+❌ Don’t check divisibility (% 4 or % 7)
+❌ Don’t count 4 and 7 separately
+❌ Don’t check for patterns like "47"
+⚡ How to recognize this pattern in future
+
+Whenever you see:
+
+“count of something”
+then “check that result again”
+
+👉 It’s a nested validation problem
+
+🔁 Mental flow (very important)
+Number → scan digits → count (4 & 7)
+                ↓
+         New number (count)
+                ↓
+     Check digits again (only 4 & 7?)
+💡 Simple example to test yourself
+Input: 123447
+→ count = 3
+→ 3 is NOT lucky
+→ answer = NO
+🧠 Final mindset
+
+👉 Don’t think:
+
+“Is n lucky?”
+
+👉 Think:
+
+“How many lucky digits are in n?”
+“Is THAT number lucky?”
+
+🚀 If you remember only ONE thing
+
+👉
+
+It’s a problem where output depends on a value derived from input, not the input itself
