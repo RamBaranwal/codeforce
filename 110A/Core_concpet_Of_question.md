@@ -1,10 +1,6 @@
----
+## A. Nearly Lucky Number — Core Concept
 
-# A. Nearly Lucky Number — Core Concept
-
-> Two-layer check: count the lucky digits (4 and 7) in the input number, then check whether that count is itself a lucky number.
-
----
+ Two-layer check: count the lucky digits (4 and 7) in the input number, then check whether that count is itself a lucky number.
 
 ## Summary
 
