@@ -13,7 +13,7 @@
 </div>
 
 <div class="input-specification"><div class="section-title">Input</div>
-<p>The only line contains n (1)  — the required sum of points.</p>
+<p>The only line contains n (1 ≤ n ≤ 25) — the required sum of points.</p>
 </div>
 
 <div class="output-specification"><div class="section-title">Output</div>
