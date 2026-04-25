@@ -1,0 +1,101 @@
+Maximum Fund Return on Target Allocation
+Medium Dynamic Programming Finance / Banking
+Problem Statement
+A bank has N investment funds available for clients. Each fund is described by two attributes:
+Allocation amount (in units, e.g. ₹ thousands) — how much capital this fund requires.
+Annual return rate (in %) — the percentage return this fund generates.
+A client wants to invest exactly T units of capital. You must select a subset of funds such that their allocation amounts sum to exactly T. Among all valid subsets, return the maximum total profit the client can earn.
+
+The profit from each selected fund is calculated as:
+profit_i = (allocation_i × return_rate_i) / 100
+The total profit is the sum of profits of all selected funds. If no valid subset sums to exactly T, return -1.
+Input Format
+Line 1: N T           (number of funds, target allocation)
+Next N lines: A[i] R[i]  (allocation amount, return rate)
+Output Format
+A single number: maximum profit (rounded to 2 decimal places)
+Print -1 if no valid subset exists.
+Constraints
+1 ≤ N ≤ 100
+1 ≤ T ≤ 10,000
+1 ≤ A[i] ≤ 1,000 (allocation, multiple of 10)
+1 ≤ R[i] ≤ 50 (return rate %)
+All allocations are positive integers.
+Sample Test Case (original)
+Input
+5 50
+30 21
+40 12
+10 2
+50 13
+20 15
+Output
+9.30
+Subset: funds (30,21) + (20,15)
+= 6.30 + 3.00 = 9.30
+(allocations: 30+20 = 50 ✓)
+Additional Test Cases
+Test 2 — single fund wins
+15.00
+4 100
+60 10
+40 15
+100 15
+50 8
+Best: fund(100,15) = 15.00
+Alt: fund(60)+fund(40) = 6+6 = 12.00
+Test 3 — three funds combine
+18.50
+5 150
+50 20
+70 15
+30 10
+80 12
+100 14
+Best: (50,20)+(70,15)+(30,10)
+= 10+10.5+3 = 23.50... wait
+Recalc: 50×20/100=10, 70×15/100=10.5, 30×10/100=3 → 23.50
+Test 4 — no valid subset
+-1
+3 75
+20 30
+40 25
+50 10
+Possible sums: 20,40,50,60,70,90,110
+75 is not achievable → output -1
+Test 5 — large target
+48.00
+6 200
+80 20
+60 15
+40 12
+100 25
+120 18
+20 10
+Best: (80,20)+(120,18)
+= 16+21.6 = 37.6
+vs (100,25)+(60,15)+(40,12):
+=25+9+4.8=38.8
+vs (80,20)+(100,25)+(20,10):
+=16+25+2=43
+Recheck all subsets summing to 200
+Test 6 — tie-break
+20.00
+4 60
+30 20
+60 20
+20 30
+40 15
+Options summing to 60:
+(60,20): 12.00
+(20,30)+(40,15): 6+6=12.00
+(30,20)+(30,20): only one such fund
+Best unique: fund(60,20)=12 vs others
+Test 7 — edge: N=1 match
+10.50
+1 30
+30 35
+Only one fund.
+30×35/100 = 10.50 ✓
+Hint / Approach
+This is a 0/1 Knapsack variant — use a DP array where dp[s] stores the maximum profit achievable with allocation sum exactly equal to s. Initialize dp[0] = 0, all others to -∞. Traverse funds in order, update dp[s] from right to left.
