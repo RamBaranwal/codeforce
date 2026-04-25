@@ -1,3 +1,4 @@
+
 # Maximum Fund Return Allocation
 
 Problem source: Local / Special Question
@@ -7,18 +8,23 @@ Memory limit per test: 1024 megabytes
 
 ## Problem
 
-You are given n investment opportunities. The i-th opportunity is described by two integers (a_i, b_i). You have a total fund of m. Allocate the available fund among the opportunities to maximize the total return. The answer should be printed with two digits after the decimal point.
+You have a total fund of `m` units and `n` investment opportunities. The i-th opportunity is described by two integers `a_i` and `b_i`:
 
-The problem allows fractional allocation of funds to an opportunity (i.e., you may invest a part of the required amount for some opportunities) to maximize the total return.
+- `a_i` — the maximum amount you may invest in this opportunity.
+- `b_i` — the percentage return (in percent) for each unit invested in this opportunity.
+
+You may invest any non-negative real amount `x_i` in opportunity `i` such that `0 ≤ x_i ≤ a_i`. The total invested amount must not exceed `m` (i.e., ∑ x_i ≤ m). The profit from investing `x_i` in opportunity `i` equals `x_i * (b_i / 100)`.
+
+Find the maximum total profit and print it with exactly two digits after the decimal point. Fractional investments are allowed.
 
 ## Input
 
-- The first line contains two integers n and m — the number of opportunities and the total available fund.
-- Each of the next n lines contains two integers a_i and b_i describing the i-th opportunity.
+- The first line contains two integers `n` and `m` — the number of opportunities and the total available fund.
+- Each of the next `n` lines contains two integers `a_i` and `b_i` describing the i-th opportunity.
 
 ## Output
 
-Print the maximum total return achievable with the available fund, formatted with two decimal places.
+Print the maximum total profit achievable with the available fund, formatted with two decimal places.
 
 ## Examples
 
@@ -63,9 +69,9 @@ Output
 18.50
 ```
 
-## Note
+## Explanation
 
-If the original problem statement or constraints differ from the description above, update this README with the precise text. The examples above are taken from the problem's local test cases.
+The optimal strategy is to greedily invest in opportunities with the highest percentage `b_i` first, taking up to their maximum `a_i`, until the fund `m` is exhausted.
 
 ## Files in this folder
 
