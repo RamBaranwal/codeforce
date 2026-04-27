@@ -43,3 +43,17 @@
     <li><a href="2204C/CSpring.java">CSpring.java</a></li>
 </ul>
 </div>
+
+**Solution idea**
+
+- Count visits using integer division: A = floor(m / a), B = floor(m / b), C = floor(m / c).
+- Use inclusion–exclusion to get pair and triple overlaps: AB = floor(m / lcm(a,b)), AC = floor(m / lcm(a,c)), BC = floor(m / lcm(b,c)), ABC = floor(m / lcm(a,b,c)).
+- Days when only Alice visits: A - AB - AC + ABC. Only Bob: B - AB - BC + ABC. Only Carol: C - AC - BC + ABC.
+- Days when exactly two visit (Alice+Bob only): AB - ABC, etc. All three: ABC.
+- Each "only one" day gives 6 liters to that person; each "two people" day gives 3 liters to each of the two; each "three people" day gives 2 liters to each.
+
+So for Alice: liters = 6*(A - AB - AC + ABC) + 3*((AB - ABC) + (AC - ABC)) + 2*ABC. Similar formulas apply to Bob and Carol.
+
+This yields an O(1) computation per test case (just several integer divisions and lcm calculations).
+
+If you want, I can also add a reference implementation file and link it here.

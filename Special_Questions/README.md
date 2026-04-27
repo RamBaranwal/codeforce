@@ -73,7 +73,16 @@ Output
 
 The optimal strategy is to greedily invest in opportunities with the highest percentage `b_i` first, taking up to their maximum `a_i`, until the fund `m` is exhausted.
 
-## Files in this folder
+**Files in this folder**
 
-- [Maximum_Fund_Return_Allocation](Maximum_Fund_Return_Allocation)
-- [Maximum_Fund_Return_Allocation.java](Maximum_Fund_Return_Allocation.java)
+- [Maximum_Fund_Return_Allocation](Special_Questions/Maximum_Fund_Return_Allocation)
+- [Maximum_Fund_Return_Allocation.java](Special_Questions/Maximum_Fund_Return_Allocation.java)
+
+**Problem source**: Local / Special Question
+
+**Explanation**
+
+- This problem is solved by sorting opportunities by their percentage return `b_i` in descending order, then greedily investing up to `a_i` in each until the total `m` is exhausted.
+- Use floating arithmetic to accumulate profit = sum(x_i * b_i / 100) and print with two decimal places.
+
+If you'd like, I can add a link to an online problem statement (Codeforces/other) if you provide the URL.
