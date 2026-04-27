@@ -1,6 +1,6 @@
-<h3>C. Spring</h3>
+<h3><a href="https://codeforces.com/problemset/problem/2204/C" target="_blank" rel="noopener noreferrer">C. Spring</a></h3>
 
-<div class="header"><div class="time-limit"><div class="property-title">time limit per test</div>2 seconds</div><div class="memory-limit"><div class="property-title">memory limit per test</div>512 megabytes</div><div class="input-file input-standard"><div class="property-title">input</div>standard input</div><div class="output-file output-standard"><div class="property-title">output</div>standard output</div></div>
+<div class="header"><div class="title">C. Spring</div><div class="time-limit"><div class="property-title">time limit per test</div>2 seconds</div><div class="memory-limit"><div class="property-title">memory limit per test</div>512 megabytes</div><div class="input-file input-standard"><div class="property-title">input</div>standard input</div><div class="output-file output-standard"><div class="property-title">output</div>standard output</div></div>
 
 <div>
 <p>Alice, Bob, and Carol visit a spring to collect water. Alice visits every a days (on days a,2a,3a,…), Bob visits every b days (on days b,2b,3b,…), and Carol visits every c days (on days c,2c,3c,…).</p>
