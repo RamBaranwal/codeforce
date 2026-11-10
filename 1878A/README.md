@@ -26,6 +26,113 @@ For each test case, print `YES` if such a subsegment exists, or `NO` otherwise.
 
 Answers are case-insensitive.
 
+## Examples
+
+### Test Case 1
+
+Input:
+
+```text
+5 4
+1 4 3 4 1
+```
+
+Output:
+
+```text
+YES
+```
+
+### Test Case 2
+
+Input:
+
+```text
+4 1
+2 3 4 4
+```
+
+Output:
+
+```text
+NO
+```
+
+### Test Case 3
+
+Input:
+
+```text
+5 6
+43 5 60 4 2
+```
+
+Output:
+
+```text
+NO
+```
+
+### Test Case 4
+
+Input:
+
+```text
+2 5
+1 5
+```
+
+Output:
+
+```text
+YES
+```
+
+### Test Case 5
+
+Input:
+
+```text
+4 1
+5 3 3 1
+```
+
+Output:
+
+```text
+YES
+```
+
+### Test Case 6
+
+Input:
+
+```text
+1 3
+3
+```
+
+Output:
+
+```text
+YES
+```
+
+### Test Case 7
+
+Input:
+
+```text
+5 3
+3 4 1 5 5
+```
+
+Output:
+
+```text
+YES
+```
+
 ## Key Observation
 
 If `k` appears anywhere in the array, choose the one-element subsegment
