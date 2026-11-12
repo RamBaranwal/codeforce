@@ -25,4 +25,8 @@ public class ATheBestCard {
         }
         return  "YES";
     }
+    public boolean isPossible(int a, int b, int c) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'isPossible'");
+    }
 }
